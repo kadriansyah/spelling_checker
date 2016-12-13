@@ -17,7 +17,7 @@ def correction(word):
 
 def candidates(word):
     "Generate possible spelling corrections for word."
-    return (known([word]) | known(edits1(word)) | known(edits2(word)) | {word})
+    return (known([word]) | known(edits1(word)) | known(edits2(word)) | known(editsX(word)) | {word})
 
 def known(words):
     "The subset of `words` that appear in the dictionary of WORDS."
@@ -28,8 +28,8 @@ def edits1(word):
     letters    = 'abcdefghijklmnopqrstuvwxyz'
     splits     = [(word[:i], word[i:])    for i in range(len(word) + 1)]
     # deletes    = [L + R[1:]               for L, R in splits if R]
-    transposes = [L + R[1] + R[0] + R[2:] for L, R in splits if len(R)>1]
-    replaces   = [L + c + R[1:]           for L, R in splits if R for c in letters]
+    # transposes = [L + R[1] + R[0] + R[2:] for L, R in splits if len(R)>1]
+    # replaces   = [L + c + R[1:]           for L, R in splits if R for c in letters]
     inserts    = [L + c + R               for L, R in splits for c in letters]
     # return set(deletes + transposes + replaces + inserts)
     return set(inserts)
@@ -37,3 +37,6 @@ def edits1(word):
 def edits2(word):
     "All edits that are two edits away from `word`."
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
+
+def editsX(word):
+    return (e3 for e1 in edits1(word) for e2 in edits1(e1) for e3 in edits1(e2))
