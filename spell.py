@@ -1,11 +1,38 @@
 # based on http://norvig.com/spell-correct.html
 
+import os
 import re
+import csv
 from collections import Counter
 
-def words(text): return re.findall(r'\w+', text.lower())
+NEWLINE = '\n'
+SKIP_FILES = {'cmds'}
+CORPUS_PATH  = 'corpus/'
 
-WORDS = Counter(words(open('news.txt').read()))
+def read_files(path):
+    for root, dir_names, file_names in os.walk(path):
+        for path in dir_names:
+            read_files(os.path.join(root, path))
+        for file_name in file_names:
+            if file_name not in SKIP_FILES:
+                file_path = os.path.join(root, file_name)
+                if os.path.isfile(file_path):
+                    lines = []
+                    f = open(file_path, encoding='latin-1')
+                    for line in f:
+                        lines.append(line)
+                    f.close()
+                    content = NEWLINE.join(lines)
+                    yield file_path, content
+
+def words(path):
+    words = []
+    for file_name, text in read_files(path):
+        print("process data => "+ file_name)
+        words += re.findall(r'\w+', text.lower())
+    return words
+
+WORDS = Counter(words(CORPUS_PATH))
 
 def P(word, N=sum(WORDS.values())):
     "Probability of `word`."
@@ -17,7 +44,7 @@ def correction(word):
 
 def candidates(word):
     "Generate possible spelling corrections for word."
-    return (known([word]) | known(edits1(word)) | known(edits2(word)) | known(editsX(word)) | {word})
+    return (known([word]) | known(edits1(word)) | known(edits2(word)) | known(edits1Expanded(word)) | {word})
 
 def known(words):
     "The subset of `words` that appear in the dictionary of WORDS."
@@ -38,5 +65,5 @@ def edits2(word):
     "All edits that are two edits away from `word`."
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
 
-def editsX(word):
+def edits1Expanded(word):
     return (e3 for e1 in edits1(word) for e2 in edits1(e1) for e3 in edits1(e2))
