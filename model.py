@@ -3,6 +3,7 @@ import string
 import nltk
 from nltk.corpus import PlaintextCorpusReader
 from enum import Enum
+from functools import reduce
 
 class LanguageModel:
     CORPUS_PATH  = 'data/clean/'
@@ -57,11 +58,8 @@ class LanguageModel:
         return self.freq_dist[word] / len(self.words)
 
     def sentence_prob(self, sentence):
-        words = sentence.split()
-        prob  = self.unigram_prob(words[0])
-        for ii in range(1, len(words) - 1):
-            prob *= self.cond_prob_dist[words[ii]].prob(words[ii + 1])
-        return prob
+        prob_list = [self.cond_prob_dist[a].prob(b) for (a,b) in nltk.bigrams(sentence.split())]
+        return reduce(lambda x,y:x*y, prob_list)
 
     def save(self):
         pickle.dump( self.words, open( "pickled/_words.p", "wb" ) )
