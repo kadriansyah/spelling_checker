@@ -18,7 +18,7 @@ class SpellCorrector:
         if load is False:
             self.words = self.__words(corpus_path)
             self.counter = self.__counter(self.words)
-            self.model = model.LanguageModel(load=True)
+            self.model = model.LanguageModel()
         else:
             self.words = pickle.load(open("pickled/_spell_words.p", "rb"))
             self.counter = pickle.load(open("pickled/_spell_counter.p", "rb"))
@@ -93,6 +93,7 @@ class SpellCorrector:
     def save(self):
         pickle.dump( self.words, open( "pickled/_spell_words.p", "wb" ) )
         pickle.dump( self.counter, open( "pickled/_spell_counter.p", "wb" ) )
+        self.model.save()
 
     def validate(self, sentence, debug=False):
         translator = str.maketrans({key: None for key in string.punctuation})
