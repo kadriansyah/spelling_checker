@@ -104,15 +104,16 @@ class SpellCorrector:
                 valid.append(word.lower())
             else:
                 candidates = self.candidates(word.lower())
-                if idx > 1:
-                    max_word = max([w for w in candidates], key=lambda w : self.model.sentence_prob(valid[idx - 2] +' '+ valid[idx - 1] +' '+ w))
+                if idx < 2:
+                    max_word = max([w for w in candidates], key=lambda w : self.model.unigram_prob(w))
                     valid.append(max_word)
 
                     if debug:
                         print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
 
+                # calculate probability with context (trigrams)
                 else:
-                    max_word = max([w for w in candidates], key=lambda w : self.model.unigram_prob(w))
+                    max_word = max([w for w in candidates], key=lambda w : self.model.sentence_prob(valid[idx - 2] +' '+ valid[idx - 1] +' '+ w))
                     valid.append(max_word)
 
                     if debug:
