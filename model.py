@@ -38,11 +38,20 @@ class LanguageModel:
         return nltk.ConditionalFreqDist(nltk.bigrams(words))
 
     def __cond_prob_dist(self, cond_freq_dist):
-        ## MLEProbDist is the unsmoothed probability distribution
+        # # MLEProbDist is the unsmoothed probability distribution
         # return nltk.ConditionalProbDist(cond_freq_dist, nltk.MLEProbDist)
 
-        # LaplaceProbDist is the add-one smoothed ProbDist
-        return nltk.ConditionalProbDist(cond_freq_dist, nltk.LaplaceProbDist, bins=len(self.words))
+        # # LaplaceProbDist is the add-one smoothed ProbDist
+        # return nltk.ConditionalProbDist(cond_freq_dist, nltk.LaplaceProbDist, bins=len(self.words))
+
+        # # WittenBellProbDist
+        # return nltk.ConditionalProbDist(cond_freq_dist, nltk.WittenBellProbDist, bins=len(self.words))
+
+        # # SimpleGoodTuringProbDist
+        # return nltk.ConditionalProbDist(cond_freq_dist, nltk.SimpleGoodTuringProbDist, bins=1e5)
+
+        # LidstoneProbDist
+        return nltk.ConditionalProbDist(cond_freq_dist, nltk.LidstoneProbDist, gamma=0.2, bins=len(self.words))
 
     def unigram_prob(self, word):
         return self.freq_dist[word] / len(self.words)
