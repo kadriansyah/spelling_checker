@@ -24,6 +24,8 @@ class SpellCorrector:
             self.counter = pickle.load(open("pickled/_spell_counter.p", "rb"))
             self.model = model.LanguageModel(load=True)
 
+        self.candidates_dict = {}
+
     def __read_files(self, path):
         for root, dir_names, file_names in os.walk(path):
             for path in dir_names:
@@ -59,9 +61,16 @@ class SpellCorrector:
         return max(self.candidates(word), key=self.__wordProb)
 
     def candidates(self, word):
+        # TODO: save candidates to REDIS, lookup first before generating candidates
         "Generate possible spelling corrections for word."
-        return (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {word})
-        # return (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | {word})
+        if self.candidates_dict.get(word):
+            return self.candidates_dict[word]
+        else:
+            candidates = (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {word})
+
+            # cache it
+            self.candidates_dict[word] = candidates
+            return candidates
 
     def __known(self, words):
         "The subset of `words` that appear in the dictionary of WORDS."
@@ -104,22 +113,3 @@ class SpellCorrector:
                 else:
                     valid.append(self.correction(word))
         return ' '.join(valid)
-
-    # def edits1(self, word):
-    #     "All edits that are one edit away from `word`."
-    #     letters      = 'aiueon'
-    #     splits     = [(word[:i], word[i:])    for i in range(len(word) + 1)]
-    #     # deletes    = [L + R[1:]               for L, R in splits if R]
-    #     # transposes = [L + R[1] + R[0] + R[2:] for L, R in splits if len(R)>1]
-    #     # replaces   = [L + c + R[1:]           for L, R in splits if R for c in letters]
-    #     inserts    = [L + c + R               for L, R in splits for c in letters]
-    #     # inserts    = [L + c + R               for L, R in splits for c in letters if c in vocal and L[:len(L)] not in vocal and R[0] not in vocal]
-    #     # return set(deletes + transposes + replaces + inserts)
-    #     return set(inserts)
-    #
-    # def edits2(self, word):
-    #     "All edits that are two edits away from `word`."
-    #     return (e2 for e1 in self.edits1(word) for e2 in self.edits1(e1))
-    #
-    # def edits3(self, word):
-    #     return (e3 for e1 in self.edits1(word) for e2 in self.edits1(e1) for e3 in self.edits1(e2))
