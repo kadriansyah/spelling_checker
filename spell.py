@@ -103,13 +103,26 @@ class SpellCorrector:
             if word in self.words:
                 valid.append(word.lower())
             else:
-                if idx >= 2:
-                    candidates = self.candidates(word.lower())
+                candidates = self.candidates(word.lower())
+                if idx == 1:
+                    max_word = max([w for w in candidates], key=lambda w : self.model.sentence_prob(valid[idx - 1] +' '+ w))
+                    valid.append(max_word)
+
+                    if debug:
+                        print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
+
+                elif idx > 1:
                     max_word = max([w for w in candidates], key=lambda w : self.model.sentence_prob(valid[idx - 2] +' '+ valid[idx - 1] +' '+ w))
                     valid.append(max_word)
 
                     if debug:
                         print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
+
                 else:
-                    valid.append(self.correction(word))
+                    max_word = max([w for w in candidates], key=lambda w : self.model.unigram_prob(w))
+                    valid.append(max_word)
+
+                    if debug:
+                        print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
+                        
         return ' '.join(valid)
