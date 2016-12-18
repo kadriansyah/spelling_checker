@@ -12,13 +12,13 @@ class SpellCorrector:
 
     NEWLINE = '\n'
     SKIP_FILES = {'cmds'}
-    CORPUS_PATH  = 'data/clean/'
+    CORPUS_PATH  = 'corpus/article/'
 
     def __init__(self, load=False, corpus_path=CORPUS_PATH):
         if load is False:
             self.words = self.__words(corpus_path)
             self.counter = self.__counter(self.words)
-            self.model = model.LanguageModel()
+            self.model = model.LanguageModel(corpus_path=corpus_path)
         else:
             self.words = pickle.load(open("pickled/_spell_words.p", "rb"))
             self.counter = pickle.load(open("pickled/_spell_counter.p", "rb"))
@@ -95,6 +95,19 @@ class SpellCorrector:
         pickle.dump( self.counter, open( "pickled/_spell_counter.p", "wb" ) )
         self.model.save()
 
+    # TODO: implement mechanism to calculate lambda for interpolation
+    def __trigram_interpolation(self, w1, w2, w3):
+        lambda1 = 0.75
+        lambda2 = 0.20
+        lambda3 = 0.05
+        return (lambda1 * self.model.sentence_prob(w1 +' '+ w2 +' '+ w3)) + (lambda2 * self.model.sentence_prob(w2 +' '+ w3)) + (lambda3 * self.model.unigram_prob(w3))
+
+    # TODO: implement mechanism to calculate lambda for interpolation
+    def __bigram_interpolation(self, w1, w2):
+        lambda1 = 0.80
+        lambda2 = 0.20
+        return (lambda1 * self.model.sentence_prob(w1 +' '+ w2)) + (lambda2 * self.model.unigram_prob(w2))
+
     def validate(self, sentence, debug=False):
         translator = str.maketrans({key: None for key in string.punctuation})
         words = [token.translate(translator).strip() for token in sentence.split()]
@@ -105,25 +118,21 @@ class SpellCorrector:
                 valid.append(word.lower())
             else:
                 candidates = self.candidates(word.lower())
-                if  idx == 0:
-                    max_word = max([w for w in candidates], key=lambda w : self.model.unigram_prob(w))
+                if  idx == 0 :
+                    max_word = max([w for w in candidates], key=lambda word: self.model.unigram_prob(word))
                     valid.append(max_word)
-
                     if debug:
                         print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
 
                 elif idx == 1:
-                    max_word = max([w for w in candidates], key=lambda w : self.model.sentence_prob(valid[idx - 1] +' '+ w))
+                    max_word = max([w for w in candidates], key=lambda word: self.__bigram_interpolation(valid[0], word))
                     valid.append(max_word)
-
                     if debug:
                         print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
 
-                # calculate probability with context (trigrams)
                 else:
-                    max_word = max([w for w in candidates], key=lambda w : self.model.sentence_prob(valid[idx - 2] +' '+ valid[idx - 1] +' '+ w))
+                    max_word = max([w for w in candidates], key=lambda word: self.__trigram_interpolation(valid[idx - 2], valid[idx - 1], word))
                     valid.append(max_word)
-
                     if debug:
                         print('candidates for '+ word +': '+ str(candidates) +', max prob word is '+ max_word.lower())
 

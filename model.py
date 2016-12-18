@@ -6,7 +6,7 @@ from enum import Enum
 from functools import reduce
 
 class LanguageModel:
-    CORPUS_PATH  = 'data/clean/'
+    CORPUS_PATH  = 'corpus/article/'
 
     def __init__(self, load=False, corpus_path=CORPUS_PATH):
         if load is False:
