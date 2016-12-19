@@ -26,11 +26,10 @@ class LanguageModel:
         # The method translate() returns a copy of the string in which all characters have been translated
         # using table (constructed with the maketrans() function in the str module),
         # optionally deleting all characters found in the string deletechars.
-        translator = str.maketrans({key: None for key in string.punctuation})
-        words = [z.translate(translator).strip() for z in wordlists.words(wordlists.fileids())]
-
-        # Hapus seluruh empty char pada list
-        return [x.strip().lower() for x in words if x.strip()]
+        translator = str.maketrans({key: ' ' for key in string.punctuation})
+        words = [z.translate(translator).lower().strip() for z in wordlists.words(wordlists.fileids())]
+        words = ' '.join(words)
+        return [x.strip().lower() for x in words.split() if x.strip()] # Hapus seluruh empty char pada list
 
     def __freq_dist(self, words):
         return nltk.FreqDist(words)

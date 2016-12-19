@@ -109,8 +109,13 @@ class SpellCorrector:
         return (lambda1 * self.model.sentence_prob(w1 +' '+ w2)) + (lambda2 * self.model.unigram_prob(w2))
 
     def validate(self, sentence, debug=False):
-        translator = str.maketrans({key: None for key in string.punctuation})
-        words = [token.translate(translator).strip() for token in sentence.split()]
+        # The method translate() returns a copy of the string in which all characters have been translated
+        # using table (constructed with the maketrans() function in the str module),
+        # optionally deleting all characters found in the string deletechars.
+        translator = str.maketrans({key: ' ' for key in string.punctuation})
+        words = [token.translate(translator).strip() for token in sentence.lower().split()]
+        words = ' '.join(words)
+        words =  [x.strip().lower() for x in words.split() if x.strip()] # Hapus seluruh empty char pada list
 
         valid = []
         for idx, word in enumerate(words):
