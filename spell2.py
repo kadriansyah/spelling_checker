@@ -7,12 +7,15 @@ import string
 import pickle
 from collections import Counter
 import model
+from symspellpy.symspellpy import SymSpell, Verbosity  # import the module
 
 class SpellCorrector:
 
     NEWLINE = '\n'
     SKIP_FILES = {'cmds'}
     CORPUS_PATH  = 'corpus/questions/'
+
+    __control_dict = {'yg':'yang'}
 
     def __init__(self, load=False, corpus_path=CORPUS_PATH):
         if load is False:
@@ -25,6 +28,21 @@ class SpellCorrector:
             self.model = model.LanguageModel(load=True)
 
         self.candidates_dict = {}
+
+        # maximum edit distance per dictionary precalculation
+        max_edit_distance_dictionary = 2
+        prefix_length = 7
+
+        # create object
+        self.sym_spell = SymSpell(max_edit_distance_dictionary, prefix_length)
+        # load dictionary
+        dictionary_path = os.path.join(os.path.dirname(__file__), "corpus/dictionary/dictionary.txt")
+        # dictionary_path = os.path.join(os.path.dirname(__file__), "corpus/symspellpy/frequency_dictionary_en_82_765.txt")
+        term_index = 0  # column of the term in the dictionary text file
+        count_index = 1  # column of the term frequency in the dictionary text file
+        if not self.sym_spell.load_dictionary(dictionary_path, term_index, count_index):
+            print("Dictionary file not found")
+            return
 
     def __read_files(self, path):
         for root, dir_names, file_names in os.walk(path):
@@ -60,15 +78,27 @@ class SpellCorrector:
         "Most probable spelling correction for word."
         return max(self.candidates(word), key=self.__wordProb)
 
-    def candidates(self, word):
+    def candidates(self, word, debug=False):
         "Generate possible spelling corrections for word."
         if self.candidates_dict.get(word):
             return self.candidates_dict[word]
         else:
-            candidates = (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {word})
-            # print(candidates)
+            # max edit distance per lookup
+            # (max_edit_distance_lookup <= max_edit_distance_dictionary)
+            max_edit_distance_lookup = 2
+            suggestion_verbosity = Verbosity.CLOSEST  # TOP, CLOSEST, ALL
+            suggestions = self.sym_spell.lookup(word, suggestion_verbosity, max_edit_distance_lookup)
 
             # cache it
+            if SpellCorrector.__control_dict.get(word) != None:
+                candidates_0 = (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {SpellCorrector.__control_dict.get(word)} | {word})
+            else:
+                candidates_0 = (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {word})
+            candidates_1 = set(suggestion.term for suggestion in suggestions)
+            candidates = candidates_0.union(candidates_1)
+
+            # print(candidates)
+
             self.candidates_dict[word] = candidates
             return candidates
 

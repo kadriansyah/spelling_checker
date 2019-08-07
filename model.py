@@ -6,7 +6,7 @@ from enum import Enum
 from functools import reduce
 
 class LanguageModel:
-    CORPUS_PATH  = 'corpus/article/'
+    CORPUS_PATH  = 'corpus/questions/'
 
     def __init__(self, load=False, corpus_path=CORPUS_PATH):
         if load is False:
@@ -60,8 +60,14 @@ class LanguageModel:
         prob_list = [self.cond_prob_dist[a].prob(b) for (a,b) in nltk.bigrams(sentence.split())]
         return reduce(lambda x,y:x*y, prob_list)
 
-    def save(self):
-        pickle.dump( self.words, open( "pickled/_words.p", "wb" ) )
-        pickle.dump( self.freq_dist, open( "pickled/_freq_dist.p", "wb" ) )
-        pickle.dump( self.cond_freq_dist, open( "pickled/_cond_freq_dist.p", "wb" ) )
-        pickle.dump( self.cond_prob_dist, open( "pickled/_cond_prob_dist.p", "wb" ) )
+    def save(self, python2=False):
+        if python2 is False:
+            pickle.dump( self.words, open( "pickled/_words.p", "wb" ))
+            pickle.dump( self.freq_dist, open( "pickled/_freq_dist.p", "wb" ))
+            pickle.dump( self.cond_freq_dist, open( "pickled/_cond_freq_dist.p", "wb" ))
+            pickle.dump( self.cond_prob_dist, open( "pickled/_cond_prob_dist.p", "wb" ))
+        else:
+            pickle.dump( self.words, open( "pickled/_words.p", "wb" ), protocol=2)
+            pickle.dump( self.freq_dist, open( "pickled/_freq_dist.p", "wb" ), protocol=2)
+            pickle.dump( self.cond_freq_dist, open( "pickled/_cond_freq_dist.p", "wb" ), protocol=2)
+            pickle.dump( self.cond_prob_dist, open( "pickled/_cond_prob_dist.p", "wb" ), protocol=2)
