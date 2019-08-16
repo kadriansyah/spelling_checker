@@ -1,4 +1,5 @@
 pickled/
 data/
 corpus/
+models/
 __pycache__/
