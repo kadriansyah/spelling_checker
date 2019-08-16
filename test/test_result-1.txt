@@ -1,44 +1,33 @@
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok apakah pendarahan implantasi itu bisa terjadi dua kali dan apakah bercampur dengan lendir seperti ingus
-Similarity Score: dok apakah pendarahan implantasi itu bisa terjadi dua kali dan apakah bercampur dengan lendir seperti ingus
-
+Similarity Score: 0.9763100147247314
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok berhubungan saat darah nifas masih ada dan warnanya putih itu apakah bisa hamil
-Similarity Score: dok berhubungan saat darah nifas masih ada dan warnanya putih itu apakah bisa hamil
-
+Similarity Score: 0.9682711958885193
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: apakah normal apabila seorang wanita tidak bisa mengeluarkan sperma ketika setelah berhubungan intim saya sering mencapai klimaks tapi tidak sampai mengeluarkan sperma mohon penjelasannya dok
-Similarity Score: apakah normal apabila seorang wanita tidak bisa mengeluarkan sperma ketika setelah berhubungan intim saya sering mencapai klimaks tapi tidak sampai mengeluarkan sperma mohon penjelasannya dok
-
+Similarity Score: 0.9532601833343506
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok apakah setelah kita bab ada sisa tinja di saluran pembuangan atau anus dok apakah saat melakukan anal dengan pasangan ada kemungkinan masih ada kotoran
-Similarity Score: dok apakah setelah kita bab ada sisa tinja di saluran pembuangan atau anus dok apakah saat melakukan anal dengan pasangan ada kemungkinan masih ada kotoran
-
+Similarity Score: 0.9503982663154602
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok apa tandanya bercak putih pada celana dalam apakah karena cairan saat terangsang
-Similarity Score: dok apa tandanya bercak putih pada celana dalam apakah karena cairan saat terangsang
-
+Similarity Score: 0.9541254639625549
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: apa betul dok jika saya onani terus sperma keluar tetapi sperma belum keluar sepenuhnya apakah sperma akan mengkristal dan akan menyebabkan batu ginjal itu saja dok terima kasih
-Similarity Score: apa betul dok jika saya onani terus sperma keluar tetapi sperma belum keluar sepenuhnya apakah sperma akan mengkristal dan akan menyebabkan batu ginjal itu saja dok terima kasih
-
+Similarity Score: 0.9542109370231628
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: apakah keluar sperma di celana terus tembus bisa mengakibatkan kehamilan
-Similarity Score: apakah keluar sperma di celana terus tembus bisa mengakibatkan kehamilan
-
+Similarity Score: 0.9576555490493774
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok keputihan saat hamil dengan warna agak kuning tidak berbau bahaya tidak
-Similarity Score: dok keputihan saat hamil dengan warna agak kuning tidak berbau bahaya tidak
-
+Similarity Score: 0.9587298035621643
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok apa yang terjadi jika kita keluar cairan banyak yang kental pada miss v apakah tahu ada kehamilan atau hanya keputihan atau keguguran
-Similarity Score: dok apa yang terjadi jika kita keluar cairan banyak yang kental pada miss v apakah tahu ada kehamilan atau hanya keputihan atau keguguran
-
+Similarity Score: 0.9610410928726196
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti sperma
-Similarity Score: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti sperma
-
+Similarity Score: 1.0
 
 sentence-1: dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti spermasentence-2: dok apakah wajar habis haid vagina mengeluarkan cairan putih susu namun tidak kental atau berbau
-Similarity Score: dok apakah wajar habis haid vagina mengeluarkan cairan putih susu namun tidak kental atau berbau
-
+Similarity Score: 0.9554620981216431
 

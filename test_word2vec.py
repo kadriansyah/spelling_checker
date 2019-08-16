@@ -2,7 +2,7 @@ from phrase_vector import PhraseVector
 from gensim.models import KeyedVectors
 
 corpus_file  = 'corpus/questions/corpus.txt'
-result_file  = 'test/test_result-2.txt'
+result_file  = 'test/test_result-1.txt'
 
 model = KeyedVectors.load('models/word2vec.model')
 
@@ -16,8 +16,8 @@ model = KeyedVectors.load('models/word2vec.model')
 
 f = open(result_file,"w+")
 
-# s1 = 'dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti sperma'
-s1 = 'dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasih'
+s1 = 'dok apakah normal jika wanita orgasme tapi tidak mengeluarkan cairan kental seperti sperma'
+# s1 = 'dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasih'
 phraseVector1 = PhraseVector(model, s1)
 for sentence in open(corpus_file):
     phraseVector2 = PhraseVector(model, sentence)
@@ -29,5 +29,5 @@ for sentence in open(corpus_file):
 
         f.write("sentence-1: {}".format(s1))
         f.write("sentence-2: {}".format(sentence))
-        f.write("Similarity Score: {}\r\n\r\n".format(sentence))
+        f.write("Similarity Score: {}\r\n\r\n".format(similarityScore))
 f.close()

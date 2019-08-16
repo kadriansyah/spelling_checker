@@ -1,120 +1,90 @@
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: malem dok numpang tanya saya sedang hamil uk 32 minggu apakah sangat bahaya kandungan saya mengenai tentang makan mie instan soalnya lagi ingin makan mie selama kehamilan baru kali ini ngerasain ingin makan mie
-Similarity Score: malem dok numpang tanya saya sedang hamil uk 32 minggu apakah sangat bahaya kandungan saya mengenai tentang makan mie instan soalnya lagi ingin makan mie selama kehamilan baru kali ini ngerasain ingin makan mie
-
+Similarity Score: 0.9504927396774292
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 8 bulan boleh kah jika saya memakan tape goreng terima kasih
-Similarity Score: dok saya sedang hamil 8 bulan boleh kah jika saya memakan tape goreng terima kasih
-
+Similarity Score: 0.9596255421638489
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang program hamil kalau minum folavit 400 minggu vit e 400iu dan prenagen esensis secara bersamaan apa boleh dok terima kasih
-Similarity Score: dok saya sedang program hamil kalau minum folavit 400 minggu vit e 400iu dan prenagen esensis secara bersamaan apa boleh dok terima kasih
-
+Similarity Score: 0.9571276903152466
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: halo dok mau tanya ini saat ini saya sedang hamil 14 minggu nah yang saya ingin tanyakan adalah bolehkah dan amankah ibu hamil meminum es tebu atau makan tebu mohon penjelasannya ya dok terima kasih
-Similarity Score: halo dok mau tanya ini saat ini saya sedang hamil 14 minggu nah yang saya ingin tanyakan adalah bolehkah dan amankah ibu hamil meminum es tebu atau makan tebu mohon penjelasannya ya dok terima kasih
-
+Similarity Score: 0.9551210999488831
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dokter saya sedang hamil muda bolehkah makan sayur nangka lodeh bagi ibu hamil muda seperti saya terima kasih
-Similarity Score: dokter saya sedang hamil muda bolehkah makan sayur nangka lodeh bagi ibu hamil muda seperti saya terima kasih
-
+Similarity Score: 0.9686201810836792
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: sore dok saya sedang hamil 31 minggu apakah boleh saya minum obat diare saya tunggu jawabannya terima kasih
-Similarity Score: sore dok saya sedang hamil 31 minggu apakah boleh saya minum obat diare saya tunggu jawabannya terima kasih
-
+Similarity Score: 0.9736831784248352
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: alo dok saya sedang hamil muda 5 minggu saat ini apa boleh makan sate sapi atau kambing
-Similarity Score: alo dok saya sedang hamil muda 5 minggu saat ini apa boleh makan sate sapi atau kambing
-
+Similarity Score: 0.9651840925216675
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: sore dok saya barusan minum es kelapa muda saya sedang hamil 11 minggu habis minum es kelapa muda apa saya bisa langsung minum suplemen vitamin d dokter
-Similarity Score: sore dok saya barusan minum es kelapa muda saya sedang hamil 11 minggu habis minum es kelapa muda apa saya bisa langsung minum suplemen vitamin d dokter
-
+Similarity Score: 0.9533276557922363
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya hamil 9 minggu diperbolehkan atau tidak makan telur ayam setengah matang
-Similarity Score: dok saya hamil 9 minggu diperbolehkan atau tidak makan telur ayam setengah matang
-
+Similarity Score: 0.9526228904724121
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil uk 8 minggu yang saya tanyakan apakah aman apabila saya konsumsi mie goreng merk mie burung dara karena saya mual kalau makan nasi terima kasih dok
-Similarity Score: dok saya sedang hamil uk 8 minggu yang saya tanyakan apakah aman apabila saya konsumsi mie goreng merk mie burung dara karena saya mual kalau makan nasi terima kasih dok
-
+Similarity Score: 0.9684284925460815
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 14 minggu apakah boleh makan dodol buah garut yang warna merah sama hijau
-Similarity Score: dok saya sedang hamil 14 minggu apakah boleh makan dodol buah garut yang warna merah sama hijau
-
+Similarity Score: 0.9517423510551453
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya hamil 6 minggu apakah boleh minum air kelapa
-Similarity Score: dok saya hamil 6 minggu apakah boleh minum air kelapa
-
+Similarity Score: 0.9578858613967896
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: selamat malam dokter sebelum saya hamil saya pencinta kopi semenjak saya hamil saya stop minum kopi sampai suatu hari saya mengidam ingin sekali minum akhirnya saya minum segelas kopi cappucino bagaimana sebenarnya dok apakah efek kopi bagi ibu hamil terima kasih
-Similarity Score: selamat malam dokter sebelum saya hamil saya pencinta kopi semenjak saya hamil saya stop minum kopi sampai suatu hari saya mengidam ingin sekali minum akhirnya saya minum segelas kopi cappucino bagaimana sebenarnya dok apakah efek kopi bagi ibu hamil terima kasih
-
+Similarity Score: 0.9516491293907166
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: selamat malam dokter saya mau tanya apakah ibu hamil boleh minum cdr atau redoxon saat ini saya dengan hamil usianya 8 minggu mohon dibantu jawab pertanyaan ini terima kasih sebelumnya
-Similarity Score: selamat malam dokter saya mau tanya apakah ibu hamil boleh minum cdr atau redoxon saat ini saya dengan hamil usianya 8 minggu mohon dibantu jawab pertanyaan ini terima kasih sebelumnya
-
+Similarity Score: 0.959979772567749
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 8 bulan saat ini saya tidak terlalu suka susu ibu hamil itu tapi susu biasa saya suka minum apakah susu milo bubuk itu boleh saya konsumsi
-Similarity Score: dok saya sedang hamil 8 bulan saat ini saya tidak terlalu suka susu ibu hamil itu tapi susu biasa saya suka minum apakah susu milo bubuk itu boleh saya konsumsi
-
+Similarity Score: 0.9556687474250793
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 4 minggu apakah boleh minum yogurt terima kasih
-Similarity Score: dok saya sedang hamil 4 minggu apakah boleh minum yogurt terima kasih
-
+Similarity Score: 0.9707006812095642
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: malam dok usia kehamilan saya 3 minggu bolehkah makan pedas walau sedang hamil meskipun sedikit dan bolehkah minum kopi susu instan sachet
-Similarity Score: malam dok usia kehamilan saya 3 minggu bolehkah makan pedas walau sedang hamil meskipun sedikit dan bolehkah minum kopi susu instan sachet
-
+Similarity Score: 0.9586736559867859
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 28 minggu tapi saya suka dan sering setiap kali minum air es ataupun es minum air es berbahaya tidak dok untuk ibu hamil terima kasih
-Similarity Score: dok saya sedang hamil 28 minggu tapi saya suka dan sering setiap kali minum air es ataupun es minum air es berbahaya tidak dok untuk ibu hamil terima kasih
-
+Similarity Score: 0.9562765955924988
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: malam dok mau tanya saya sedang hamil 8 minggu bolehkah makan mie instan dengan bumbunya soalnya ada bilang tidak boleh terima kasih
-Similarity Score: malam dok mau tanya saya sedang hamil 8 minggu bolehkah makan mie instan dengan bumbunya soalnya ada bilang tidak boleh terima kasih
-
+Similarity Score: 0.958897590637207
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil menuju 5 bulan apak betul bumil tidak boleh minum es katanya bisa bikin bayi besar saat dilahirkan
-Similarity Score: dok saya sedang hamil menuju 5 bulan apak betul bumil tidak boleh minum es katanya bisa bikin bayi besar saat dilahirkan
-
+Similarity Score: 0.9517658352851868
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: seoamat pagi dok saya ibu april saat ini sedang hamil usia 8 minggu yang mau saya tanyakan apakah boleh saya konsumsi obat pusing atau migrain karena sudah saya pakai istirahat migrain pusingnya tetap tidak mau hilang terima kasih
-Similarity Score: seoamat pagi dok saya ibu april saat ini sedang hamil usia 8 minggu yang mau saya tanyakan apakah boleh saya konsumsi obat pusing atau migrain karena sudah saya pakai istirahat migrain pusingnya tetap tidak mau hilang terima kasih
-
+Similarity Score: 0.9528637528419495
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: sore dok saya hamil usia 23 minggu 4 hari apakah boleh minum air kelapa dengan biasa atau air dengan hijau terima kasih
-Similarity Score: sore dok saya hamil usia 23 minggu 4 hari apakah boleh minum air kelapa dengan biasa atau air dengan hijau terima kasih
-
+Similarity Score: 0.9544554948806763
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya hamil 30 minggu apakah aman makan tape ubi
-Similarity Score: dok saya hamil 30 minggu apakah aman makan tape ubi
-
+Similarity Score: 0.9510509967803955
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: malam dok saya mau tanya minum energen setiap hari untuk ibu hamil 31 minggu boleh tidak dok mohon jawabnya terima kasih
-Similarity Score: malam dok saya mau tanya minum energen setiap hari untuk ibu hamil 31 minggu boleh tidak dok mohon jawabnya terima kasih
-
+Similarity Score: 0.9537675380706787
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya ulangi hamil 29 minggu apakah boleh makan mie instan
-Similarity Score: dok saya ulangi hamil 29 minggu apakah boleh makan mie instan
-
+Similarity Score: 0.9500383138656616
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: pagi dok saya sedang hamil 20 minggu bolehkah minum air kelapa muda kalau boleh berapa hari sekali dianjurkannya terima kasih
-Similarity Score: pagi dok saya sedang hamil 20 minggu bolehkah minum air kelapa muda kalau boleh berapa hari sekali dianjurkannya terima kasih
-
+Similarity Score: 0.9818304181098938
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasih
-Similarity Score: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasih
-
+Similarity Score: 1.0
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya sedang hamil 12 minggu apakah boleh minum es dengan kelapa muda
-Similarity Score: dok saya sedang hamil 12 minggu apakah boleh minum es dengan kelapa muda
-
+Similarity Score: 0.9543011784553528
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: dok saya hamil 18 minggu saat ini sedang meriang dan panas dalam apakah boleh konsumsi susu bear brand susu beruang
-Similarity Score: dok saya hamil 18 minggu saat ini sedang meriang dan panas dalam apakah boleh konsumsi susu bear brand susu beruang
-
+Similarity Score: 0.9580677151679993
 
 sentence-1: dok saya sedang hamil 9 minggu bolehkah saya minum air kelapa muda kelapa hijau terima kasihsentence-2: siang dok nama saya ibu yanti dok saya kan sedang hamil apakah ibu hamil boleh minum air lemon selama mengandung terima kasih dok
-Similarity Score: siang dok nama saya ibu yanti dok saya kan sedang hamil apakah ibu hamil boleh minum air lemon selama mengandung terima kasih dok
-
+Similarity Score: 0.953128457069397
 
