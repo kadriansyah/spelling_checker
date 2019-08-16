@@ -15,7 +15,16 @@ class SpellCorrector:
     SKIP_FILES = {'cmds'}
     CORPUS_PATH  = 'corpus/questions/'
 
-    __control_dict = {'yg':'yang'}
+    __control_dict = {
+        'yg':'yang',
+        'skrg':'sekarang',
+        'msh':'masih',
+        'sdgkn':'sedangkan',
+        'tsb':'tersebut',
+        'tp':'tapi',
+        'dr':'dari',
+        'n':'dan'
+    }
 
     def __init__(self, load=False, corpus_path=CORPUS_PATH):
         if load is False:
@@ -94,6 +103,7 @@ class SpellCorrector:
                 candidates_0 = (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {SpellCorrector.__control_dict.get(word)} | {word})
             else:
                 candidates_0 = (self.__known([word]) | self.__known(self.__edits1(word)) | self.__known(self.__edits2(word)) | self.__known(self.__edits3(word)) | {word})
+
             candidates_1 = set(suggestion.term for suggestion in suggestions)
             candidates = candidates_0.union(candidates_1)
 
@@ -108,7 +118,7 @@ class SpellCorrector:
 
     def __edits1(self, word):
         "All edits that are one edit away from `word`."
-        letters      = 'aiueon'
+        letters    = 'aiueon'
         splits     = [(word[:i], word[i:])    for i in range(len(word) + 1)]
         inserts    = [L + c + R               for L, R in splits for c in letters]
         return set(inserts)
